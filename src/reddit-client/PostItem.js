@@ -9,7 +9,6 @@ class ListLastPosts extends React.Component {
         this.dateFormat= new DateFormat();
     }    
 
-
     render() {
         let post=this.item.data;
         return (

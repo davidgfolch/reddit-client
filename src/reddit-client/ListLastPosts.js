@@ -24,8 +24,7 @@ class ListLastPosts extends GenericList {
   fetchPosts = (subreddit) => {
     this.setSubreddit(subreddit);
     this.setState({ list: null });
-    let url = get_posts(this.subreddit);
-    fetch(url)
+    fetch(get_posts(this.subreddit))
       .then(res => res.json())
       .then(res => this.setState({ list: res })) 
   }
@@ -40,7 +39,6 @@ class ListLastPosts extends GenericList {
 
   load = (subreddit) => {
     this.setSubreddit(subreddit.target?subreddit.target.value:subreddit);
-    this.setState(prevState => ({ isReloading: true }));
     this.fetchPosts(this.subreddit);
   }
 
@@ -51,7 +49,7 @@ class ListLastPosts extends GenericList {
       return (
           <div className="listContainer">
               <div className="listFilters">
-                <div className="floatRight"><ReloadButton handleClick={this.load} disabled={this.isReloading}/></div>
+                <div className="floatRight"><ReloadButton handleClick={this.load}/></div>
                 <div className="floatLeft">Last posts in <a href={url} target='subredditJson'>{url}</a>:</div>
               </div>
               <div style={{ clear: 'both' }}/>
@@ -59,7 +57,7 @@ class ListLastPosts extends GenericList {
           </div>
       );  
     }
-    return <div><p>Loading {this.whatFails}...</p></div>
+    return super.render();
   }
 }
 

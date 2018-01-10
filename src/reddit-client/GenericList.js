@@ -7,6 +7,7 @@ class GenericList extends React.Component {
     this.state = { 
       list: null,
     };
+    this.listName=props.listName;
   }
 
   checkListLoaded() {
@@ -22,8 +23,10 @@ class GenericList extends React.Component {
   }
 
   render() {
-    if (!this.gonnaRenderList())
-      return <div><p>Loading subreddits {this.whatFails}...</p></div>
+    if (!this.gonnaRenderList()) {
+      return <div><p>Loading {this.listName} {this.whatFails}...</p></div>
+
+    }
     return (null);
   }
 }

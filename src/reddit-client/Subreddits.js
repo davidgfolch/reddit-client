@@ -21,7 +21,7 @@ class SubReddits extends GenericList {
     fetch(url)
       .then(res => res.json())
       .then(res => this.setState({ list: res }))
-      .catch(e => console.log(e));
+      .catch(e => console.error(e));
   }
 
   componentDidMount() {

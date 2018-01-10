@@ -29,8 +29,8 @@ class App extends React.Component {
         <span className="App-title">Welcome to Reddit Client</span><br/>
         <span className="App-subtitle">By David G. Folch</span>
         <hr/>
-        <Subreddits subreddit={this.subreddit} callback={this.fetchPosts} ref={(ref) => this.subreddits = ref}/>
-        <ListLastPosts subreddit={this.subreddit} ref={(ref) => this.listLastPosts = ref}/>
+        <Subreddits subreddit={this.subreddit} callback={this.fetchPosts} ref={(ref) => this.subreddits = ref} listName='subreddits'/>
+        <ListLastPosts subreddit={this.subreddit} ref={(ref) => this.listLastPosts = ref} listName=' posts'/>
       </div>
     );
   }
