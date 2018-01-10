@@ -1,0 +1,79 @@
+
+.listContainer {
+    display: inline-block;
+    max-width: 1024px;
+    margin: 1em;
+}
+
+.listFilters {
+    color: lightgray;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.post {
+    color: black;
+    display: flex;
+    margin: 1em;
+    background-color: white;
+    border: 0.5px solid lightgray;
+}
+
+.thumbnail{
+    float: left;
+    margin-top: 0.5px;
+    margin-right: 1em;
+}
+
+.innerRows {
+    display: inline;    
+    width: 100%;
+}
+.date{
+    color: gray;
+    float: right;
+    font-size: x-small;
+    font-weight: bold;
+    margin: 1em;
+}
+.title {
+    text-align: left;
+    font-size: smaller;
+    clear: both;
+    float: left;
+}
+.author {
+    clear: both;
+    float: left;
+    margin: 1em;
+    text-align: left;
+}
+.score {
+    color: gray;    
+    float: right;
+    margin: 1em;
+    padding: 0.4em;
+    padding-bottom: 0.3em;
+    border: 1px solid lightgray;
+}
+.comments {
+    color: gray;    
+    float: right;
+    margin: 1em;
+    padding: 0.4em;
+    padding-bottom: 0.3em;
+    border: 1px solid lightgray;
+}
+
+.topMargin1em {
+    margin-top: 1em;
+}
+
+.floatRight {
+    position: relative;
+    float: right;
+}
+.floatLeft {
+    position: relative;
+    float: left;
+}
